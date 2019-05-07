@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -lt 2 ]; then
+    echo "Usage: $0 [input_hccapx] [output_hccapx] [mac_filter_list|None]"
+    exit 255
+fi
+
 INPUT_FILE=$1
 INPUT_BASENAME=$(basename ${INPUT_FILE})
 OUTPUT_FILE=$2
